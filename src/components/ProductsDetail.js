@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { DataContext } from "./DataContext";
 
 const ProductsDetail = () => {
-  const [products, setProducts] = useContext(DataContext);
+  const [products] = useContext(DataContext);
   const { id } = useParams();
 
   const check = products.filter((product) => {
@@ -22,7 +22,7 @@ const ProductsDetail = () => {
           <div className='row mt-2'>
             <section key={product._id} className='col-lg-8 col-md-8'>
               <div className='products-image pb-4'>
-                <img src={product.image} />
+                <img src={product.image} alt='products'/>
               </div>
             </section>
             <section

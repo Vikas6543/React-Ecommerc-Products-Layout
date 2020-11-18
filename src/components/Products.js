@@ -3,7 +3,7 @@ import { DataContext } from "./DataContext";
 import { Link } from "react-router-dom";
 
 const Products = () => {
-  const [products, setProducts] = useContext(DataContext);
+  const [products] = useContext(DataContext);
 
   return (
     <>
@@ -17,7 +17,7 @@ const Products = () => {
             >
               <Link style={{textDecoration: 'none'}} to={`/products/${product._id}`}>
                 <h5 className='text-center py-3 text-info'>{product.name}</h5>
-                <img className='img-fluid home-image' src={product.image} />
+                <img className='img-fluid home-image' src={product.image} alt='products' />
               </Link>
               <h6 className='buy-now'>Buy Now</h6>
             </section>
