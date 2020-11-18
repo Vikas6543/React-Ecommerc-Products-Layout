@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 2rem;
+}
+
+.header {
+  background: rgb(246, 64, 64);
+  color: white;
+  padding: 12px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+}
+.products-image img {
+  height: auto;
+  width: 80%;
+}
+
+.buy-now {
+  position: absolute;
+  top: 75%;
+  background: rgb(251, 79, 79);
+  color: white;
+  width: 80%;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
+  display: none;
+  transition: 2s;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+}
+
+.home-products:hover .buy-now {
+  display: block;
+}
